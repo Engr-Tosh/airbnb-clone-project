@@ -155,6 +155,65 @@ The backend includes clear and standardized API documentation using the OpenAPI 
 ### Data Optimization
 Indexes and caching strategies are implemented to enhance performance and scalability. This ensures fast data retrieval, reduced load on the database, and smoother user experience during high traffic periods.
 
+## API Security
+
+Security is a critical part of the Airbnb Clone backend, as the platform handles sensitive user information, payment transactions, and private data. The following measures are implemented to ensure the system is protected from unauthorized access, data breaches, and malicious activities.
+
+---
+
+### Authentication
+
+We implement **token-based authentication** (e.g., JWT) to ensure that only verified users can access protected resources. Each user must log in to receive a valid token, which is required to access their account or perform actions like booking or listing properties.
+
+>  *Why?* This prevents unauthorized users from accessing accounts and ensures user identity verification.
+
+---
+
+### Authorization
+
+Role-based access control is enforced to differentiate between hosts and guests. For example, only hosts can manage properties, while only guests can create bookings.
+
+>  *Why?* This prevents privilege escalation and restricts actions to only those users who are authorized to perform them.
+
+---
+
+### Rate Limiting & Throttling
+
+We apply rate limits to API endpoints to protect against brute-force attacks, abuse, and denial-of-service (DoS) attempts.
+
+> *Why?* This ensures API stability, fairness, and system resilience under heavy or malicious usage.
+
+---
+
+### Data Validation & Sanitization
+
+All user inputs are validated and sanitized to prevent SQL injection, XSS, and other injection-based attacks. Django’s built-in validation and serializers help enforce strict rules.
+
+> *Why?* This protects the application from code injection vulnerabilities and ensures data consistency.
+
+---
+
+### Secure Payments
+
+All payment data is processed through secure channels (e.g., HTTPS) and integrates with trusted third-party payment gateways. Payment records are encrypted and never store sensitive card details directly.
+
+> *Why?* This protects users’ financial information and ensures compliance with payment industry standards.
+
+---
+
+### HTTPS & SSL/TLS
+
+All data transmitted between the client and server is encrypted using SSL/TLS protocols.
+
+> *Why?* This ensures data privacy and integrity, preventing eavesdropping and man-in-the-middle attacks.
+
+---
+
+### Environment Variables & Secrets Management
+
+Sensitive information like API keys, database credentials, and secret tokens are stored securely in environment variables and not exposed in the codebase.
+
+> *Why?* This keeps critical secrets safe and prevents accidental leaks through version control.
 
 
 Stay tuned for updates and new features
