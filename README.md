@@ -11,14 +11,7 @@ This project is a backend system designed to mimic the core functionality of Air
 - ***Data Optimization***: Optimize database for performance and scalability
 
 ## Tech Stack
-+ **Django** - Python web framework for building RESTful API
-+ **Django REST Framework** - Provides tools for API Development
-+ **PostgreSQL** - Relational Database for data storage
-+ **GraphQL** - Allows for flexible and efficient API querying
-+ **Celery** - To handle asynchronous tasks such as sending notifications or processing paymnents
-+ **Redis** - Caching and session management
-+ **Docker** - Containerization
-+ **CI/CD Pipelines** - Automated testing and deployment
++ **Django** **Django REST Framework** **PostgreSQL** **GraphQL** **Celery** **Redis** **Docker** **CI/CD Pipelines**
 
 ## Team Roles
 
@@ -30,6 +23,16 @@ This project is a backend system designed to mimic the core functionality of Air
 |QA Engineer | Tests all backend functionalities through manual and automated testing to ensure quality, functionality, and security. Writes unit tests and runs integration and regression testing to catch bugs early and ensure stable releases.|
 |Test automation Engineer | Designs a test automation ecosystem. Writes and maintains test scripts for automated testing.|
 |Project Manager | Makes sure a product or its part is delivered on time and within budget. Manages and motivates the software development team.|
+
+## Technology Stack Overview
++ **Django** - A Python web framework for building RESTful API
++ **Django REST Framework** - Provides tools for API Development
++ **PostgreSQL** - A powerful Relational Database for data storage
++ **GraphQL** - Allows for flexible and efficient API querying
++ **Celery** - For handling asynchronous tasks such as sending notifications or processing paymnents
++ **Redis** - Used for caching and session management
++ **Docker** - Containerization tool for consistent development and deployment environments
++ **CI/CD Pipelines** - Automated pipelines for testing and deployment
 
 ---
 
