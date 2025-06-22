@@ -13,6 +13,8 @@ This project is a backend system designed to mimic the core functionality of Air
 ## Tech Stack
 **Django**, **Django REST Framework**, **PostgreSQL**, **GraphQL**, **Celery**, **Redis**, **Docker**, **CI/CD Pipelines**
 
+---
+
 ## Team Roles
 
 | Role | Responsibility |
@@ -23,6 +25,8 @@ This project is a backend system designed to mimic the core functionality of Air
 |QA Engineer | Tests all backend functionalities through manual and automated testing to ensure quality, functionality, and security. Writes unit tests and runs integration and regression testing to catch bugs early and ensure stable releases.|
 |Test automation Engineer | Designs a test automation ecosystem. Writes and maintains test scripts for automated testing.|
 |Project Manager | Makes sure a product or its part is delivered on time and within budget. Manages and motivates the software development team.|
+
+---
 
 ## Technology Stack Overview
 + **Django** - A Python web framework for building RESTful API
@@ -120,40 +124,28 @@ Ratings and feedback submitted by guests after their stay
 
 The Airbnb Clone project is structured around core features that replicate the essential functionalities of Airbnb. These features ensure users can interact with the platform as guests or hosts, manage properties, make bookings, process payments, and leave reviews.
 
----
-
 ### User Management
 This feature handles user registration, login, profile management, and authentication. It supports role differentiation between hosts and guests and ensures secure access through password hashing and token-based authentication.
-
----
 
 ### Property Management
 Hosts can create, update, retrieve, and delete property listings. This feature allows users to showcase accommodations with details like descriptions, prices, and images, making properties discoverable to potential guests.
 
----
-
 ### Booking System
 Guests can book properties by selecting check-in and check-out dates. The system validates availability, calculates the total cost, and records the booking details, forming the core of the rental process.
-
----
 
 ### Payment Processing
 Handles financial transactions securely when a booking is confirmed. This feature ensures that payment data is captured, stored, and processed correctly, enabling transaction tracking and status monitoring.
 
----
-
 ### Review System
 Guests can leave ratings and comments about their stay after completing a booking. This feature builds trust among users by providing social proof and feedback for future guests and property owners.
-
----
 
 ### API Documentation
 The backend includes clear and standardized API documentation using the OpenAPI Specification and GraphQL schema. This supports developers during integration and testing by providing example requests, responses, and query structures.
 
----
-
 ### Data Optimization
 Indexes and caching strategies are implemented to enhance performance and scalability. This ensures fast data retrieval, reduced load on the database, and smoother user experience during high traffic periods.
+
+---
 
 ## API Security
 
@@ -214,6 +206,32 @@ All data transmitted between the client and server is encrypted using SSL/TLS pr
 Sensitive information like API keys, database credentials, and secret tokens are stored securely in environment variables and not exposed in the codebase.
 
 > *Why?* This keeps critical secrets safe and prevents accidental leaks through version control.
+
+---
+
+
+## CI/CD Pipeline
+
+### What is CI/CD?
+**CI/CD (Continuous Integration and Continuous Deployment)** is a development practice that automates the process of testing, building, and deploying code. It ensures that changes to the codebase are automatically integrated, tested, and pushed to production or staging environments with minimal human intervention.
+
+### Why is CI/CD Important?
+- **Faster Development Cycles**: Automates testing and deployment so developers can ship features more frequently and reliably.
+- **Early Bug Detection**: Automated tests catch errors before they reach production.
+- **Consistency & Reliability**: Ensures consistent deployment steps across environments.
+- **Improved Collaboration**: Multiple developers can contribute without breaking the application, thanks to automatic integration and validation.
+
+### Tools Used
+- **GitHub Actions**: Automates workflows such as running tests, linting code, and deploying when changes are pushed to the repository.
+- **Docker**: Provides a consistent and portable development environment across all stages of the pipeline.
+- **Docker Compose**: Manages multi-container setups for local and CI environments.
+- **Heroku / AWS / Render** *(optional)*: Hosting platforms that can be integrated with the pipeline for automatic deployment.
+
+### Example Workflow
+1. Developer pushes code to GitHub.
+2. GitHub Actions runs automated tests and lint checks.
+3. If successful, the app is built using Docker.
+4. Deployment is triggered to a staging or production server.
 
 
 Stay tuned for updates and new features
