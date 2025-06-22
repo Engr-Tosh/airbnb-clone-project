@@ -34,6 +34,84 @@ This project is a backend system designed to mimic the core functionality of Air
 + **Docker** - Containerization tool for consistent development and deployment environments
 + **CI/CD Pipelines** - Automated pipelines for testing and deployment
 
+## Database Design
+
+### User
+Represents all users of the platform whether hosts or guests.
+
+**Key Fields:**
+- `id`: Primary key 
+- `name`: Users full name
+- `email`: Unique email used for authentication
+- `password_hash`: Securely stored hashed password
+- `is_host`: Boolean variable indicatinf if the user can list properties
+
+**Relationships:**
+- A user can own multiple properties if they are a host.
+- A user can make multiple bookings as a guest.
+- A user can leave multiple reviews.
+- A user is referenced by the host_id in the Properties table and guest_id in the Bookings table.
+
+### Properties
+Represents properties listed on the platform by hosts.
+
+**Key Fields:**
+- `id`: Primary Key
+- `host_id`: Foreign Key referencing Users(id)
+- `title`: Title of the property.
+- `description`: Detailed Info about the property
+- `price_per_night`: Cost per night (in chosen currency)
+
+**Relationships:**
+- A property belongs to one user (host).
+- A property can have many bookings.
+- A property can be reviewed through associated bookings.
+
+### Bookings
+Reservations made by guests for properties
+
+**Key Fields**
+`id`: Primary Key
+`property_id`: Foreign Key referencing properties(id)
+`guest_id`: Foriegn Key referencing Users(id)
+`check_in_date`: Start date of user stay
+`check_out_date`: End date of user stay
+
+**Relationships:**
+- A booking is made by one user (guest).
+- A booking is for one specific property.
+- A booking can have one payment.
+- A booking can receive one review.
+
+### Payments
+Represents Payment records for bookings
+
+**Key Fields:**
+`id`: Primary key
+`booking_id`: Foreign Key referencing Bookings(id)
+`amount`: Total amount paid for the booking
+`payment_status`: Status of payment(pending, completed, failed)
+`timestamp`: Time of transaction
+
+**Relationships:**
+- A payment is linked to one booking.
+- Each booking has at most one payment record.
+
+### Reviews
+Ratings and feedback submitted by guests after their stay
+
+**Key Fields:** 
+`id`: Primary Key 
+`booking_id`: Foreign key referencing Bookings(id)
+`user_id`: Foreign key referencing Users(id)
+`rating`: Star rating (1 to 5)
+`comment`: Guest's written feedback
+
+**Relationships:**
+- A review is written by one user.
+- A review is linked to one booking.
+- Indirectly, a review relates to a property through the booking.
+
 ---
 
 Stay tuned for updates and new features
