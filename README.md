@@ -233,5 +233,6 @@ Sensitive information like API keys, database credentials, and secret tokens are
 3. If successful, the app is built using Docker.
 4. Deployment is triggered to a staging or production server.
 
+---
 
 Stay tuned for updates and new features
