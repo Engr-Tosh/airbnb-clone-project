@@ -34,6 +34,8 @@ This project is a backend system designed to mimic the core functionality of Air
 + **Docker** - Containerization tool for consistent development and deployment environments
 + **CI/CD Pipelines** - Automated pipelines for testing and deployment
 
+---
+
 ## Database Design
 
 ### User
@@ -71,11 +73,11 @@ Represents properties listed on the platform by hosts.
 Reservations made by guests for properties
 
 **Key Fields**
-`id`: Primary Key
-`property_id`: Foreign Key referencing properties(id)
-`guest_id`: Foriegn Key referencing Users(id)
-`check_in_date`: Start date of user stay
-`check_out_date`: End date of user stay
+- `id`: Primary Key
+- `property_id`: Foreign Key referencing properties(id)
+- `guest_id`: Foriegn Key referencing Users(id)
+- `check_in_date`: Start date of user stay
+- `check_out_date`: End date of user stay
 
 **Relationships:**
 - A booking is made by one user (guest).
@@ -87,11 +89,11 @@ Reservations made by guests for properties
 Represents Payment records for bookings
 
 **Key Fields:**
-`id`: Primary key
-`booking_id`: Foreign Key referencing Bookings(id)
-`amount`: Total amount paid for the booking
-`payment_status`: Status of payment(pending, completed, failed)
-`timestamp`: Time of transaction
+- `id`: Primary key
+- `booking_id`: Foreign Key referencing Bookings(id)
+- `amount`: Total amount paid for the booking
+- `payment_status`: Status of payment(pending, completed, failed)
+- `timestamp`: Time of transaction
 
 **Relationships:**
 - A payment is linked to one booking.
@@ -101,11 +103,11 @@ Represents Payment records for bookings
 Ratings and feedback submitted by guests after their stay
 
 **Key Fields:** 
-`id`: Primary Key 
-`booking_id`: Foreign key referencing Bookings(id)
-`user_id`: Foreign key referencing Users(id)
-`rating`: Star rating (1 to 5)
-`comment`: Guest's written feedback
+- `id`: Primary Key 
+- `booking_id`: Foreign key referencing Bookings(id)
+- `user_id`: Foreign key referencing Users(id)
+- `rating`: Star rating (1 to 5)
+- `comment`: Guest's written feedback
 
 **Relationships:**
 - A review is written by one user.
@@ -113,5 +115,46 @@ Ratings and feedback submitted by guests after their stay
 - Indirectly, a review relates to a property through the booking.
 
 ---
+
+## Feature Breakdown
+
+The Airbnb Clone project is structured around core features that replicate the essential functionalities of Airbnb. These features ensure users can interact with the platform as guests or hosts, manage properties, make bookings, process payments, and leave reviews.
+
+---
+
+### User Management
+This feature handles user registration, login, profile management, and authentication. It supports role differentiation between hosts and guests and ensures secure access through password hashing and token-based authentication.
+
+---
+
+### Property Management
+Hosts can create, update, retrieve, and delete property listings. This feature allows users to showcase accommodations with details like descriptions, prices, and images, making properties discoverable to potential guests.
+
+---
+
+### Booking System
+Guests can book properties by selecting check-in and check-out dates. The system validates availability, calculates the total cost, and records the booking details, forming the core of the rental process.
+
+---
+
+### Payment Processing
+Handles financial transactions securely when a booking is confirmed. This feature ensures that payment data is captured, stored, and processed correctly, enabling transaction tracking and status monitoring.
+
+---
+
+### Review System
+Guests can leave ratings and comments about their stay after completing a booking. This feature builds trust among users by providing social proof and feedback for future guests and property owners.
+
+---
+
+### API Documentation
+The backend includes clear and standardized API documentation using the OpenAPI Specification and GraphQL schema. This supports developers during integration and testing by providing example requests, responses, and query structures.
+
+---
+
+### Data Optimization
+Indexes and caching strategies are implemented to enhance performance and scalability. This ensures fast data retrieval, reduced load on the database, and smoother user experience during high traffic periods.
+
+
 
 Stay tuned for updates and new features
