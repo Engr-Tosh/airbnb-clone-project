@@ -24,8 +24,8 @@ This project is a backend system designed to mimic the core functionality of Air
 
 | Role | Responsibility |
 |------|----------------|
-|Backend Developer | Responsible for developing the server-side logic, implementing REST and GraphQL APIs, managing integrations, and ensuring the backend meets functional requirements. Works with Django and DRF to handle user authentication, property management, bookings, and reviews.|Database Administrator | Designs, implements, and maintains the PostgreSQL database structure. Ensures data integrity, creates indexes for query performance, manages backups, and oversees optimization strategies such as caching and normalization.
-|
+|Backend Developer | Responsible for developing the server-side logic, implementing REST and GraphQL APIs, managing integrations, and ensuring the backend meets functional requirements. Works with Django and DRF to handle user authentication, property management, bookings, and reviews.|
+|Database Administrator| Designs, implements, and maintains the PostgreSQL database structure. Ensures data integrity, creates indexes for query performance, manages backups, and oversees optimization strategies such as caching and normalization.|
 
 
 
