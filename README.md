@@ -26,7 +26,8 @@ This project is a backend system designed to mimic the core functionality of Air
 |------|----------------|
 |Backend Developer | Responsible for developing the server-side logic, implementing REST and GraphQL APIs, managing integrations, and ensuring the backend meets functional requirements. Works with Django and DRF to handle user authentication, property management, bookings, and reviews.
 |
-|Database Administrator | Designs, implements, and maintains the PostgreSQL database structure. Ensures data integrity, creates indexes for query performance, manages backups, and oversees optimization strategies such as caching and normalization.|
+|Database Administrator | Designs, implements, and maintains the PostgreSQL database structure. Ensures data integrity, creates indexes for query performance, manages backups, and oversees optimization strategies such as caching and normalization.
+|
 |DevOps Engineer | Builds and maintains CI/CD pipelines, manages Docker containers, and oversees deployment, scaling, and monitoring of the backend services. Ensures high availability and reliability of the infrastructure. |
 |QA Engineer | Tests all backend functionalities through manual and automated testing to ensure quality, functionality, and security. Writes unit tests and runs integration and regression testing to catch bugs early and ensure stable releases. |
 |Test automation Engineer | Designs a test automation ecosystem. Writes and maintains test scripts for automated testing |
