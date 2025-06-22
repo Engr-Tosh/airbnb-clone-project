@@ -11,7 +11,7 @@ This project is a backend system designed to mimic the core functionality of Air
 - ***Data Optimization***: Optimize database for performance and scalability
 
 ## Tech Stack
-+ **Django** **Django REST Framework** **PostgreSQL** **GraphQL** **Celery** **Redis** **Docker** **CI/CD Pipelines**
+**Django**, **Django REST Framework**, **PostgreSQL**, **GraphQL**, **Celery**, **Redis**, **Docker**, **CI/CD Pipelines**
 
 ## Team Roles
 
